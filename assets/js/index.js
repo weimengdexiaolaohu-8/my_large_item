@@ -28,17 +28,17 @@ function getUserInfo() {
         //     }
         // }
     });
+}
 
-    function renderAvater(user) {
-        var name = user.nickname || user.username
-        $("#welcome").html("欢迎&nbsp;&nbsp;" + name)
-        if (user.user_pic !== null) {
-            $(".layui-nav-img").prop("src", user.user_pic).show()
-            $(".text_avater").hide()
-        } else {
-            $(".layui-nav-img").hide()
-            var fisr = name[0].toUpperCase()
-            $(".text_avater").html(fisr).show()
-        }
+function renderAvater(user) {
+    var name = user.nickname || user.username
+    $("#welcome").html("欢迎&nbsp;&nbsp;" + name)
+    if (user.user_pic !== null) {
+        $(".layui-nav-img").prop("src", user.user_pic).show()
+        $(".text_avater").hide()
+    } else {
+        $(".layui-nav-img").hide()
+        var fisr = name[0].toUpperCase()
+        $(".text_avater").html(fisr).show()
     }
 }

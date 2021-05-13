@@ -1,7 +1,6 @@
 $.ajaxPrefilter(function(option) {
     option.url = "http://api-breakingnews-web.itheima.net" + option.url
-    console.log(option.url);
-    //统一为有权限的接口，设置请求头
+        //统一为有权限的接口，设置请求头
     if (option.url.indexOf("/my/") !== -1) {
         option.headers = {
             Authorization: localStorage.getItem("token") || ""
