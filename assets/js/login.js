@@ -49,7 +49,7 @@ $(function() {
             data: $(this).serialize(),
             success: function(res) {
                 console.log(res);
-                if (res.status !== 0) return layer.msg(res.messages)
+                if (res.status !== 0) return layer.msg("账号或密码不正确！")
                 layer.msg("登陆成功")
                 localStorage.setItem("token", res.token)
                 location.assign("index.html")
